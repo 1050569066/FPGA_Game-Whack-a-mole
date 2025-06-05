@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jun  5 22:06:17 2025
+| Host         : TraFamTo running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            1 |
+|      4 |            7 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              62 |           23 |
+| No           | No                    | Yes                    |              76 |           30 |
+| No           | Yes                   | No                     |             112 |           28 |
+| Yes          | No                    | No                     |              16 |            4 |
+| Yes          | No                    | Yes                    |             113 |           32 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+------------------------------+------------------------+------------------+----------------+
+|      Clock Signal     |         Enable Signal        |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-----------------------+------------------------------+------------------------+------------------+----------------+
+|  recounter/u5/clk_div |                              |                        |                1 |              3 |
+|  recounter/u1/CLK     | recounter/uut2/Q_reg[2]_1[0] | random/rand_gen/CLR_L  |                2 |              4 |
+|  recounter/u1/CLK     | recounter/uut2/E[0]          | random/rand_gen/CLR_L  |                1 |              4 |
+|  clk_IBUF_BUFG        | button/key_state[15]_i_1_n_0 |                        |                1 |              4 |
+|  clk_IBUF_BUFG        | button/key_state[11]_i_1_n_0 |                        |                1 |              4 |
+|  clk_IBUF_BUFG        | button/p_2_out[3]            |                        |                1 |              4 |
+|  clk_IBUF_BUFG        | button/p_2_out[7]            |                        |                1 |              4 |
+|  clk_IBUF_BUFG        | recounter/uut2/flag_reg[0]   | random/rand_gen/CLR_L  |                1 |              4 |
+|  clk_IBUF_BUFG        |                              |                        |               11 |             23 |
+|  clk_IBUF_BUFG        |                              | recounter/u1/clk_out   |                6 |             24 |
+|  clk_IBUF_BUFG        |                              | recounter/u5/clk_div_0 |                6 |             24 |
+|  clk_IBUF_BUFG        | sing/cnt_num                 | random/rand_gen/CLR_L  |                7 |             24 |
+|  clk_IBUF_BUFG        |                              | random/clk_div/clear   |                8 |             32 |
+|  clk_IBUF_BUFG        |                              | button/clear           |                8 |             32 |
+|  clk_IBUF_BUFG        | recounter/uut2/E[0]          | random/rand_gen/CLR_L  |                9 |             32 |
+|  clk_out              |                              |                        |               11 |             36 |
+|  clk_IBUF_BUFG        | recounter/uut2/beep_en       | random/rand_gen/CLR_L  |               12 |             45 |
+|  clk_IBUF_BUFG        |                              | random/rand_gen/CLR_L  |               30 |             76 |
++-----------------------+------------------------------+------------------------+------------------+----------------+
+
+

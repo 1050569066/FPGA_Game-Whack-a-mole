@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../game.srcs/sources_1/new/check.v" \
+"../../../../game.srcs/sources_1/new/clk_div.v" \
+"../../../../game.srcs/sources_1/new/clk_div2.v" \
+"../../../../game.srcs/sources_1/new/dynamicled2.v" \
+"../../../../game.srcs/sources_1/new/game.v" \
+"../../../../game.srcs/sources_1/new/random_led.v" \
+"../../../../game.srcs/sources_1/new/recounter.v" \
+"../../../../game.srcs/sources_1/new/recounter10.v" \
+"../../../../game.srcs/sources_1/new/recounter3.v" \
+"../../../../game.srcs/sources_1/new/sing.v" \
+"../../../../game.srcs/sources_1/new/top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
